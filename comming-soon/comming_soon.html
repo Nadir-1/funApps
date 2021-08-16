@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Event</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="overlay1"></div>
+      <div class="main">
+        <div class="title1" id="eventName">Event</div>
+        <div class="title2">Comming-Soon</div>
+        <div class="time">
+          <div class="days" id="box">
+            <div class="ti">Days</div>
+            <div class="nu" id="da">00</div>
+          </div>
+          <div class="hours" id="box">
+            <div class="ti">Hours</div>
+            <div class="nu" id="ho">00</div>
+          </div>
+          <div class="minutes" id="box">
+            <div class="ti">Minutes</div>
+            <div class="nu" id="mi">00</div>
+          </div>
+          <div class="seconds" id="box">
+            <div class="ti">seconds</div>
+            <div class="nu" id="se">00</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="overlay2" id="ovl2"></div>
+    <div class="modal" id="modal">
+      <button id="btn1">X</button>
+      <form action="">
+        <label for="name">Enter the name of the event :</label>
+        <br />
+        <input type="text" id="name" />
+        <br />
+        <label for="dd">Date of the event : (YYYY-MM-DD 00-00:00)</label>
+        <br />
+        <input type="text" id="dd" />
+        <br></br>
+        <p id="p">You entered a wrong Date</p>
+        <button id="btn2">Submit</button>
+      </form>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

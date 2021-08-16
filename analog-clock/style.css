@@ -1,0 +1,211 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body,
+html {
+  height: 100%;
+  width: 100%;
+}
+#main {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background-color: #091921;
+}
+#clock {
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("Aclock.png");
+  background-size: cover;
+  border: blue 5px solid;
+  border-radius: 50%;
+}
+#clock::before {
+  content: "";
+  position: absolute;
+  background-color: #fff;
+  border-radius: 50%;
+  z-index: 100;
+}
+.hour,
+.minute,
+.second {
+  position: absolute;
+}
+.h,
+.min,
+.sec {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  border-radius: 50%;
+}
+.h::before {
+  content: "";
+  position: absolute;
+  background-color: #ff105e;
+  z-index: 10;
+}
+.min::before {
+  content: "";
+  position: absolute;
+  background-color: #fff;
+  z-index: 11;
+}
+.sec::before {
+  content: "";
+  position: absolute;
+  background-color: rgb(21, 25, 247);
+  z-index: 12;
+}
+#Date {
+  align-self: center;
+  font-weight: 900;
+  margin-bottom: 10px;
+  color: #ff105e;
+}
+
+/*     Large devices    */
+
+@media screen and (min-width: 501px) {
+  #Date {
+    font-size: 30px;
+  }
+  #clock {
+    height: 350px;
+    width: 350px;
+  }
+  #clock::before {
+    width: 10px;
+    height: 10px;
+  }
+  .hour,
+  .h {
+    height: 160px;
+    width: 160px;
+  }
+  .minute,
+  .min {
+    height: 190px;
+    width: 190px;
+  }
+  .second,
+  .sec {
+    height: 230px;
+    width: 230px;
+  }
+  .h::before {
+    width: 8px;
+    height: 80px;
+    border-radius: 6px 6px 0 0;
+  }
+  .min::before {
+    width: 4px;
+    height: 90px;
+    border-radius: 6px 6px 0 0;
+  }
+  .sec::before {
+    width: 2px;
+    height: 150px;
+    border-radius: 6px 6px 0 0;
+  }
+}
+
+/*       Medium devices     */
+
+@media screen and (min-width: 381px) and (max-width: 500px) {
+  #Date {
+    font-size: 30px;
+  }
+  #clock {
+    height: 260px;
+    width: 260px;
+  }
+  #clock::before {
+    width: 7.5px;
+    height: 7.5px;
+  }
+  .hour,
+  .h {
+    height: 120px;
+    width: 120px;
+  }
+  .minute,
+  .min {
+    height: 140px;
+    width: 140px;
+  }
+  .second,
+  .sec {
+    height: 170px;
+    width: 170px;
+  }
+  .h::before {
+    width: 6px;
+    height: 60px;
+    border-radius: 4px 4px 0 0;
+  }
+  .min::before {
+    width: 3px;
+    height: 65px;
+    border-radius: 4px 4px 0 0;
+  }
+  .sec::before {
+    width: 1.5px;
+    height: 110px;
+    border-radius: 4px 4px 0 0;
+  }
+}
+
+/*    small decices   */
+
+@media screen and (max-width: 380px) {
+  #Date {
+    font-size: 20px;
+  }
+  #clock {
+    height: 210px;
+    width: 210px;
+  }
+  #clock::before {
+    width: 6px;
+    height: 6px;
+  }
+  .hour,
+  .h {
+    height: 100px;
+    width: 100px;
+  }
+  .minute,
+  .min {
+    height: 120px;
+    width: 120px;
+  }
+  .second,
+  .sec {
+    height: 150px;
+    width: 150px;
+  }
+  .h::before {
+    width: 5px;
+    height: 50px;
+    border-radius: 3px 3px 0 0;
+  }
+  .min::before {
+    width: 2px;
+    height: 58px;
+    border-radius: 3px 3px 0 0;
+  }
+  .sec::before {
+    width: 1px;
+    height: 90px;
+    border-radius: 3px 3px 0 0;
+  }
+}
