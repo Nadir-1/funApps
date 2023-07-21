@@ -8,7 +8,7 @@ var ta = document.getElementById("tan");
 var exp = document.getElementById("exp");
 var ln = document.getElementById("ln");
 var lo = document.getElementById("log");
-//var power = document.getElementById("power");
+var power = document.getElementById("power");
 var sqroot = document.getElementById("sqrt");
 var screen = document.getElementById("screen");
 var hiMath = document.querySelector(".d1");
@@ -73,8 +73,14 @@ mul.addEventListener("click", function () {
   resetCalculator();
   screen.textContent += "*";
 });
+
+function powerFunction(str) {
+  return str.replaceAll("^", "**");
+}
+
 equal.addEventListener("click", function () {
   let str = screen.textContent;
+  str = powerFunction(str);
   let strResult = str
     .replaceAll("Cos(", "Math.cos(")
     .replaceAll("Sin(", "Math.sin(")
